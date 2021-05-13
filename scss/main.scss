@@ -1,0 +1,40 @@
+                        @for $i from 1 through 12 {
+                            .col-sm-#{$i} {
+                                width: (100% / #{$i});
+                            }
+                        }
+                        
+                        @for $i from 1 to 12 {
+                            .col-sm-#{$i} {
+                                width: (100% / #{$i});
+                            }
+                        }
+                        
+                        @for $i from 1 to 6 {
+                            .h#{$i} {
+                                font-size: (40px / #{$i});
+                            }
+                        }
+                        
+                        $sizes: 40px,
+                        50px,
+                        80px;
+                        @each $size in $sizes {
+                            .icon-#{$size} {
+                                font-size: $size;
+                                height: $size;
+                                width: $size;
+                            }
+                        }
+                        
+                        @each $size in (5px, 10px, 15px) {
+                            .padding-#{$size} {
+                                padding: #{$size}
+                            }
+                        }
+                        
+                        @each $size in (5px, 10px, 15px) {
+                            .margin-#{$size} {
+                                margin: #{$size}px;
+                            }
+                        }

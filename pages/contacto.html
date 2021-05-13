@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <title>Home</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../Index.html">MAT</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../pages/bio.html">Biografia</a></li>
+                    <li><a href="../pages/discografía.html">Discografia</a></li>
+                    <li><a href="../pages/integrantes.html">Integrantes</a></li>
+                    <li><a href="../pages/media.html">Media</a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Merchandise</a></li>
+                            <li><a href="#">Extras</a></li>
+                            <li><a href="#">Media</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="band" class="container-fluid">
+        <div class="main">
+            <form action="contacto.html" method="GET">
+                <fieldset>
+                    <legend>Información Personal:</legend>
+                    <label for="sexo">sexo:</label> <br><br>
+                    <input type="radio" name="sexo" value="hombre"> Hombre
+                    <input type="radio" name="sexo" value="mujer"> Mujer
+                    <br><br>
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br><br>
+                    <label for="apellido">Apellido:</label><br>
+                    <input type="text" id="apellido" name="apellido" placeholder="Apellido"><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="estado_civil">Estado Civil</label><br><br>
+                    <select name="estado_civil" id="estado_civil">
+                        <option value="estado_civil" selected="">Soltero</option>
+                        <option value="estado_civil">Casado</option>
+                        <option value="estado_civil">Divorciado</option>
+                        <option value="estado_civil">Unión Libre</option>
+                    </select><br><br>
+                    <label for="recibir_boletin">Recibe nuestro boletin</label> <br><br>
+                    <input type="radio" name="recibir" value="Si"> Si
+                    <input type="radio" name="recibir" value="No"> No
+                    <br><br>
+                    <label for="comentarios">Comentarios:</label><br>
+                    <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea><br><br>
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday"><br><br>
+                    <input type="submit" value="Enviar">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="text-center">
+        <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <p>misiles a tierra 2021 - Bogotá Colombia</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

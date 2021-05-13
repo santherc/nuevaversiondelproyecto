@@ -1,0 +1,130 @@
+/* {
+    margin: 10px 15px 15px 20px;
+    padding: 10px 15px 15px 20px;
+}
+*/
+
+
+/*
+body {
+    font-family: 'Roboto', 'sans-serif'
+}
+
+a {
+    text-decoration: none;
+}
+
+.indexBody {
+    background-image: url('../media/mat.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.indexHeader {
+    background-color: #f1f4fd;
+    opacity: 0.8;
+}
+
+
+/*
+.titulos {
+    font-size: 40px;
+    font-weight: 200;
+    padding: 15px;
+    color: purple;
+    opacity: 0.5;
+}
+*/
+
+
+/*
+.itemIndex {
+    display: contents;
+    margin: 20px 15px 20px 15px;
+}
+
+
+/*  
+.linkIndex:hover {
+    text-decoration: underline;
+    color: rgb(119, 33, 33);
+    font-size: 20px;
+}
+*/
+
+.linkNav:hover {
+    text-decoration: underline;
+}
+
+
+/*
+.linkActivo {
+    text-decoration: underline;
+    color: rgb(173, 36, 36);
+}
+*/
+
+
+/*
+h2 {
+    background-color: #e2e9fa;
+    opacity: 0.9;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-container>div {
+    background-image: linear-gradient(to left, blue, orange);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+.grid-container div {
+    width: 100px;
+    height: 100px;
+    transition: all 2s;
+}
+
+
+/*
+div {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+}
+*/
+
+
+/*
+.grid-container div:hover {
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    background-color: cyan;
+}
+
+h1 {
+    animation-duration: 2s;
+    animation-name: aparecer;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.blockquote {
+    background-color: #f1f4fd;
+    opacity: 0.8;
+}*/
