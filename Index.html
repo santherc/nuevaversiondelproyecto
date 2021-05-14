@@ -4,75 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <title>Home</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">MAT</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="./pages/bio.html">Biografia</a></li>
-                    <li><a href="./pages/discografía.html">Discografia</a></li>
-                    <li><a href="./pages/integrantes.html">Integrantes</a></li>
-                    <li><a href="./pages/media.html">Media</a></li>
-                    <li><a href="./pages/contacto.html">Contacto</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Merchandise</a></li>
-                            <li><a href="#">Extras</a></li>
-                            <li><a href="#">Media</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-                </ul>
+<body class="indexBody">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+        <div class="container">
+            <a href="../Index.html" class="navbar-brand mr-3">MAT</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="./pages/bio.html" class="nav-item nav-link active">Biografia</a>
+                    <a href="./pages/discografía.html" class="nav-item nav-link">Discografia</a>
+                    <a href="./pages/integrantes.html" class="nav-item nav-link">Integrantes</a>
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <a href="./pages/media.html" class="nav-item nav-link">Media</a>
+                    <a href="./pages/contacto.html" class="nav-item nav-link">Contacto</a>
+                </div>
             </div>
         </div>
     </nav>
-    <div id="band" class="container text-center">
+
+    <div class="container mt-3">
         <div class="row">
-            <div class="col-sm-3">
-                <h3>MISILES A TIERRA</h3>
-                <p><em>We love music!</em></p>
-                <p>Proyecto creado por Vlad Carvajal en 2013, enfocado en el rock fuerte, con letras emotivas, e influencias en otros estilos musicales, "Puro Rock Bogotano".</p>
-                <br>
+            <div class="col-sm-8">
+                <div class="main-content">
+                    <h3>MISILES A TIERRA</h3>
+                    <p><em>We love music!</em></p>
+                    <p>Proyecto creado por Vlad Carvajal en 2013, enfocado en el rock fuerte, con letras emotivas, e influencias en otros estilos musicales, "Puro Rock Bogotano ".</p>
+                </div>
+                <img src="./media/sesiones.jpg " class="img-fluid" alt="creando" width="300px" height="400px">
             </div>
-            <div class="col-sm-3">
-                <img src="./media/sesiones.jpg" class="img-fluid" alt="creando" width="300" height="400">
-                <div>
+            <div class="col-sm-4">
+                <!--Nested rows within a column-->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="sidebar-content"><img src="./media/logo1.jpg" class="img-fluid " alt="M.A.T." width="400px" height="400px"></div>
+                    </div>
                 </div>
-                <div class="col-sm-3">
-                    <p>Nuevo Album: Frío en la mente - Fuego en el corazón</p><br><br>
-                </div>
-                <div class="col-sm-3">
-                    <img src="./media/logo.jpg" class="img-fluid" alt="M.A.T." width="400" height="400">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="sidebar-content">
+                            <h3>Nuevo Album:</h3>
+                            <h3>Frío en la mente - Fuego en el corazón</h3>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="sidebar-content">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Footer -->
-        <footer class="text-center">
-            <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-                <span class="glyphicon glyphicon-chevron-up"></span>
-            </a><br><br>
-            <p>misiles a tierra 2021 - Bogotá Colombia</p>
-        </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    </div>
+    <!-- Footer -->
+    <footer class="text-center">
+        <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a><br><br>
+        <p>misiles a tierra 2021 - Bogotá Colombia</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 </body>
 
 </html>

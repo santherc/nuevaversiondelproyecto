@@ -1,40 +1,99 @@
-                        @for $i from 1 through 12 {
-                            .col-sm-#{$i} {
-                                width: (100% / #{$i});
-                            }
-                        }
-                        
-                        @for $i from 1 to 12 {
-                            .col-sm-#{$i} {
-                                width: (100% / #{$i});
-                            }
-                        }
-                        
-                        @for $i from 1 to 6 {
-                            .h#{$i} {
-                                font-size: (40px / #{$i});
-                            }
-                        }
-                        
-                        $sizes: 40px,
-                        50px,
-                        80px;
-                        @each $size in $sizes {
-                            .icon-#{$size} {
-                                font-size: $size;
-                                height: $size;
-                                width: $size;
-                            }
-                        }
-                        
-                        @each $size in (5px, 10px, 15px) {
-                            .padding-#{$size} {
-                                padding: #{$size}
-                            }
-                        }
-                        
-                        @each $size in (5px, 10px, 15px) {
-                            .margin-#{$size} {
-                                margin: #{$size}px;
-                            }
-                        }
+@for $i from 1 to 6 {
+    .h#{$i} {
+        font-size: (40px / #{$i});
+    }
+}
+
+$sizes: 40px,
+50px,
+80px;
+@each $size in $sizes {
+    .icon-#{$size} {
+        font-size: $size;
+        height: $size;
+        width: $size;
+    }
+}
+
+@each $size in (5px, 10px, 15px) {
+    .padding-#{$size} {
+        padding: #{$size}
+    }
+}
+
+@each $size in (5px, 10px, 15px) {
+    .margin-#{$size} {
+        margin: #{$size}px;
+    }
+}
+
+body {
+    background-image: url('../media/mat.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* Small devices (landscape phones, 544px and up) */
+
+@media (min-width: 544px) {
+    .class-name {
+        font-size: 16px;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    .class-name {
+        font-size: 30px;
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    .class-name {
+        font-size: 40px;
+    }
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    .class-name {
+        font-size: 48px;
+    }
+}
+
+.main-content {
+    min-height: 230px;
+    background: #dbdfe5;
+}
+
+.sidebar-content {
+    min-height: 100px;
+    margin-bottom: 30px;
+    background: #b4bac0;
+}
+
+p {
+    padding: 50px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    background: #dbdfe5;
+}
+
+.page-holder {
+    min-height: 100vh;
+}
+
+.bg-cover {
+    background-size: cover !important;
+}
