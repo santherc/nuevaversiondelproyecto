@@ -46,13 +46,15 @@
 .margin-15px {
   margin: 15pxpx; }
 
+/*
 body {
-  background-image: url("../media/mat.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed; }
-
+    background-image: url('../media/mat.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+*/
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) {
   .class-name {
@@ -75,22 +77,25 @@ body {
 
 .main-content {
   min-height: 230px;
-  background: #dbdfe5; }
+  background: #e1e8f3; }
 
 .sidebar-content {
   min-height: 100px;
   margin-bottom: 30px;
-  background: #b4bac0; }
+  background: #e1e8f3; }
 
+/*
 p {
-  padding: 50px;
-  font-size: 32px;
-  font-weight: bold;
-  text-align: center;
-  background: #dbdfe5; }
-
+    padding: 50px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    background: #dbdfe5;
+}
+*/
 .page-holder {
   min-height: 100vh; }
 
 .bg-cover {
+  background-image: url("../media/matlogo.jpg");
   background-size: cover !important; }
