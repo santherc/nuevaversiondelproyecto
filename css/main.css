@@ -55,6 +55,20 @@ body {
     background-attachment: fixed;
 }
 */
+html {
+  background: url(.media/logogris.JPG) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+/*
+.bg-cover {
+    background-image: url(.media/logogris.JPG);
+    background-size: cover;
+}
+
+
 /* Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) {
   .class-name {
@@ -95,7 +109,3 @@ p {
 */
 .page-holder {
   min-height: 100vh; }
-
-.bg-cover {
-  background-image: url("../media/matlogo.jpg");
-  background-size: cover !important; }
