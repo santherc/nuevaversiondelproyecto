@@ -1,7 +1,7 @@
 {
     "name": "santiagohernandez",
     "version": "1.0.0",
-    "description": "sass de mi priyecto",
+    "description": "sass de mi proyecto Misiles a Tierra. Pagina de mi antigua banda",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
