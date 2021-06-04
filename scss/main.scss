@@ -46,6 +46,21 @@ body {
 }
 */
 
+html {
+    background: url(.media/logogris.JPG) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/*
+.bg-cover {
+    background-image: url(.media/logogris.JPG);
+    background-size: cover;
+}
+
 
 /*
 .bg-cover {

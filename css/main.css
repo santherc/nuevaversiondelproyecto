@@ -1,57 +1,73 @@
 html {
-  background: url(../media/logogris.JPG) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+    background: url(../media/logogris.JPG) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 .h1 {
-  font-size: 40px; }
+    font-size: 40px;
+}
 
 .h2 {
-  font-size: 20px; }
+    font-size: 20px;
+}
 
 .h3 {
-  font-size: 13.33333px; }
+    font-size: 13.33333px;
+}
 
 .h4 {
-  font-size: 10px; }
+    font-size: 10px;
+}
 
 .h5 {
-  font-size: 8px; }
+    font-size: 8px;
+}
 
 .icon-40px {
-  font-size: 40px;
-  height: 40px;
-  width: 40px; }
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+}
 
 .icon-50px {
-  font-size: 50px;
-  height: 50px;
-  width: 50px; }
+    font-size: 50px;
+    height: 50px;
+    width: 50px;
+}
 
 .icon-80px {
-  font-size: 80px;
-  height: 80px;
-  width: 80px; }
+    font-size: 80px;
+    height: 80px;
+    width: 80px;
+}
 
 .padding-5px {
-  padding: 5px; }
+    padding: 5px;
+}
 
 .padding-10px {
-  padding: 10px; }
+    padding: 10px;
+}
 
 .padding-15px {
-  padding: 15px; }
+    padding: 15px;
+}
 
 .margin-5px {
-  margin: 5pxpx; }
+    margin: 5pxpx;
+}
 
 .margin-10px {
-  margin: 10pxpx; }
+    margin: 10pxpx;
+}
 
 .margin-15px {
-  margin: 15pxpx; }
+    margin: 15pxpx;
+}
+
 
 /*
 body {
@@ -62,6 +78,16 @@ body {
     background-attachment: fixed;
 }
 */
+
+<<<<<<< HEAD=======html {
+    background: url(.media/logogris.JPG) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+>>>>>>>3ce9edc4a461b486dee57c4f3d24869d194bec38
 /*
 .bg-cover {
     background-image: url(.media/logogris.JPG);
@@ -70,33 +96,51 @@ body {
 
 
 /* Small devices (landscape phones, 544px and up) */
+
 @media (min-width: 544px) {
-  .class-name {
-    font-size: 16px; } }
+    .class-name {
+        font-size: 16px;
+    }
+}
+
 
 /* Medium devices (tablets, 768px and up) */
+
 @media (min-width: 768px) {
-  .class-name {
-    font-size: 30px; } }
+    .class-name {
+        font-size: 30px;
+    }
+}
+
 
 /* Large devices (desktops, 992px and up) */
+
 @media (min-width: 992px) {
-  .class-name {
-    font-size: 40px; } }
+    .class-name {
+        font-size: 40px;
+    }
+}
+
 
 /* Extra large devices (large desktops, 1200px and up) */
+
 @media (min-width: 1200px) {
-  .class-name {
-    font-size: 48px; } }
+    .class-name {
+        font-size: 48px;
+    }
+}
 
 .main-content {
-  min-height: 230px;
-  background: #e1e8f3; }
+    min-height: 230px;
+    background: #e1e8f3;
+}
 
 .sidebar-content {
-  min-height: 100px;
-  margin-bottom: 30px;
-  background: #e1e8f3; }
+    min-height: 100px;
+    margin-bottom: 30px;
+    background: #e1e8f3;
+}
+
 
 /*
 p {
@@ -107,5 +151,7 @@ p {
     background: #dbdfe5;
 }
 */
+
 .page-holder {
-  min-height: 100vh; }
+    min-height: 100vh;
+}
