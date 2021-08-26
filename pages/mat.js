@@ -1,56 +1,171 @@
-//mi primer carrito//
+// Variables
 
-let categoria1 = "camiseta"
-let categoria2 = "gorra"
-let categoria3 = "disco"
-
-class Producto {
-
-    constructor(tipo, categoria, precio, stock, disp) {
-        this.tipo = tipo;
-        this.categoria = categoria;
-        this.precio = precio;
-        this.stock = stock;
-        this.disp = disp;
-
+const dataBase = [{
+        id: 1,
+        nombre: 'camiseta',
+        precio: 40,
+        imagen: '../media/camisetalogo.jpg'
+    },
+    {
+        id: 2,
+        nombre: 'gorra',
+        precio: 30,
+        imagen: '../media/gorralogo.jpg'
+    },
+    {
+        id: 3,
+        nombre: 'disco',
+        precio: 15,
+        imagen: '../media/portadaalbum.jpg'
+    },
+    {
+        id: 4,
+        nombre: 'poster de pared',
+        precio: 5,
+        imagen: '../media/logoband.jpg'
     }
 
-    nuevoPrecio() {
-        this.precio = Number(prompt("nuevo precio"))
-    }
-    cambiarMercancia() {
-        this.categoria = prompt("cambiar de categoria")
-    }
+];
+
+// Declarando variables //
+
+let carrito = [];
+let total = 0;
+const DOMitems = document.querySelector('#items');
+const DOMcarrito = document.querySelector('#carrito');
+const DOMtotal = document.querySelector('#total');
+const DOMbotonVaciar = document.querySelector('#boton-vaciar');
+
+// Funciones //
+
+// Función añadida que encontré y me pareció interesante aplicar //
+
+function reloadProductos() {
+    dataBase.forEach((info) => {
+        // Estructura
+        const myMerch = document.createElement('div');
+        myMerch.classList.add('card', 'col-sm-4');
+        // Body
+        const myMerchCardBody = document.createElement('div');
+        myMerchCardBody.classList.add('card-body');
+        // Titulo
+        const myMerchTitle = document.createElement('h5');
+        myMerchTitle.classList.add('card-title');
+        myMerchTitle.textContent = info.nombre;
+        // Imagen
+        const myMerchImagen = document.createElement('img');
+        myMerchImagen.classList.add('img-fluid');
+        myMerchImagen.setAttribute('src', info.imagen);
+        // Precio
+        const myMerchPrecio = document.createElement('p');
+        myMerchPrecio.classList.add('card-text');
+        myMerchPrecio.textContent = '€' + info.precio;
+        // Boton 
+        const myMerchBoton = document.createElement('button');
+        myMerchBoton.classList.add('btn', 'btn-primary');
+        myMerchBoton.textContent = '+';
+        myMerchBoton.setAttribute('marcador', info.id);
+        myMerchBoton.addEventListener('click', anyadirProductoAlCarrito);
+        // Insertamos
+        myMerchCardBody.appendChild(myMerchImagen);
+        myMerchCardBody.appendChild(myMerchTitle);
+        myMerchCardBody.appendChild(myMerchPrecio);
+        myMerchCardBody.appendChild(myMerchBoton);
+        myMerch.appendChild(myMerchCardBody);
+        DOMitems.appendChild(myMerch);
+    });
+}
+
+// Añadir el producto al carrito //
+
+function anyadirProductoAlCarrito(evento) {
+    carrito.push(evento.target.getAttribute('marcador'))
+
+    calcularTotal();
+
+    reloadCarrito();
 
 }
 
-let merch = []
 
-let producto1 = new Producto("logo banda", categoria1, 10, 40, true);
-let producto2 = new Producto("gorra logo", categoria2, 15, 32, true);
-let producto3 = new Producto("cover album", categoria3, 10, 25, true);
-let producto4 = new Producto("logo oscuro", categoria1, 5, 30, true);
-let producto5 = new Producto("gorra plana", categoria2, 50, 35, true);
-let producto6 = new Producto("demo", categoria3, 10, 26, true);
+function reloadCarrito() {
 
-merch.push(producto1)
-merch.push(producto2)
-merch.push(producto3)
-merch.push(producto4)
-merch.push(producto5)
-merch.push(producto6)
+    DOMcarrito.textContent = '';
 
-console.log(merch)
+    const carritoSinDuplicados = [...new Set(carrito)];
 
-//producto3.nuevoPrecio()
-//producto4.cambiarMercancia()
+    carritoSinDuplicados.forEach((item) => {
 
+        const miItem = dataBase.filter((itemDataBase) => {
 
-let merchDelproducto1 = merch.filter(e => e.categoria === categoria1)
-console.log(merchDelproducto1)
-let merchDelproducto2 = merch.filter(e => e.categoria === categoria2)
-console.log(merchDelproducto2)
-let merchDelproducto3 = merch.filter(e => e.categoria === categoria3)
-console.log(merchDelproducto3)
+            return itemDataBase.id === parseInt(item);
+        });
 
-let menorPrecio = merch.find(e => e.precio > 0)
+        const numeroUnidadesItem = carrito.reduce((total, itemId) => {
+
+            return itemId === item ? total += 1 : total;
+        }, 0);
+
+        const myMerch = document.createElement('li');
+        myMerch.classList.add('list-group-item', 'text-right', 'mx-2');
+        myMerch.textContent = `€${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}`;
+
+        const mBtn = document.createElement('button');
+        mBtn.classList.add('btn', 'btn-danger', 'mx-5');
+        mBtn.textContent = 'X';
+        mBtn.style.marginLeft = '1rem';
+        mBtn.dataset.item = item;
+        mBtn.addEventListener('click', borrarItemCarrito);
+
+        myMerch.appendChild(mBtn);
+        DOMcarrito.appendChild(myMerch);
+    });
+}
+
+// Actualiza carrito //
+
+function borrarItemCarrito(evento) {
+
+    const id = evento.target.dataset.item;
+
+    carrito = carrito.filter((carritoId) => {
+        return carritoId !== id;
+    });
+
+    reloadCarrito();
+
+    calcularTotal();
+}
+
+// Función calculo con productos duplicados //
+
+function calcularTotal() {
+
+    total = 0;
+
+    carrito.forEach((item) => {
+
+        const miItem = dataBase.filter((itemBaseDatos) => {
+            return itemBaseDatos.id === parseInt(item);
+        });
+        total = total + miItem[0].precio;
+    });
+
+    DOMtotal.textContent = total.toFixed(2);
+}
+
+// Vaciar carrito //
+
+function vaciarCarrito() {
+
+    carrito = [];
+
+    reloadCarrito();
+    calcularTotal();
+}
+
+// Eventos
+DOMbotonVaciar.addEventListener('click', vaciarCarrito);
+
+// Inicio
+reloadProductos();
