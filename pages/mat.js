@@ -169,3 +169,9 @@ DOMbotonVaciar.addEventListener('click', vaciarCarrito);
 
 // Inicio
 reloadProductos();
+
+$("h2")
+
+let h2 = $("h2")
+
+console.log(h2)
