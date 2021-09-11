@@ -1,3 +1,4 @@
+/*
 html {
     background: url(../media/logogris.JPG) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -5,6 +6,7 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
+*/
 
 .h1 {
     font-size: 40px;
@@ -79,21 +81,6 @@ body {
 }
 */
 
-<<<<<<< HEAD=======html {
-    background: url(.media/logogris.JPG) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
->>>>>>>3ce9edc4a461b486dee57c4f3d24869d194bec38
-/*
-.bg-cover {
-    background-image: url(.media/logogris.JPG);
-    background-size: cover;
-}
-
 
 /* Small devices (landscape phones, 544px and up) */
 
@@ -130,28 +117,34 @@ body {
     }
 }
 
-.main-content {
-    min-height: 230px;
-    background: #e1e8f3;
-}
-
-.sidebar-content {
-    min-height: 100px;
-    margin-bottom: 30px;
-    background: #e1e8f3;
-}
-
-
-/*
-p {
-    padding: 50px;
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
-    background: #dbdfe5;
-}
-*/
-
 .page-holder {
     min-height: 100vh;
+}
+
+.button {
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: #fff;
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 28px;
+    border-top: 1px solid #E0E0E0;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
 }
