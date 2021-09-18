@@ -1,8 +1,8 @@
-// Variables
+// Variables //
 
 const dataBase = [{
         id: 1,
-        nombre: 'camiseta',
+        nombre: 't-shirt',
         precio: 40,
         imagen: '../media/camisetalogo.jpg'
     },
@@ -59,7 +59,7 @@ function reloadProductos() {
         // Precio
         const myMerchPrecio = document.createElement('p');
         myMerchPrecio.classList.add('card-text');
-        myMerchPrecio.textContent = '€' + info.precio;
+        myMerchPrecio.textContent = 'Unit usd $ ' + info.precio;
         // Boton 
         const myMerchBoton = document.createElement('button');
         myMerchBoton.classList.add('btn', 'btn-primary');
@@ -108,7 +108,7 @@ function reloadCarrito() {
 
         const myMerch = document.createElement('li');
         myMerch.classList.add('list-group-item', 'text-right', 'mx-2');
-        myMerch.textContent = `€${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}`;
+        myMerch.textContent = `${miItem[0].nombre} x ${numeroUnidadesItem} - usd $ ${miItem[0].precio}`;
 
         const mBtn = document.createElement('button');
         mBtn.classList.add('btn', 'btn-danger', 'mx-5');
