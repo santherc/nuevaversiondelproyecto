@@ -44,7 +44,7 @@ function reloadProductos() {
     dataBase.forEach((info) => {
         // Estructura
         const myMerch = document.createElement('div');
-        myMerch.classList.add('card', 'col-sm-4');
+        myMerch.classList.add('card', 'col-sm-6');
         // Body
         const myMerchCardBody = document.createElement('div');
         myMerchCardBody.classList.add('card-body');
@@ -58,7 +58,7 @@ function reloadProductos() {
         myMerchImagen.setAttribute('src', info.imagen);
         // Precio
         const myMerchPrecio = document.createElement('p');
-        myMerchPrecio.classList.add('card-text');
+        myMerchPrecio.classList.add('btn', 'btn-danger', 'mx-5');
         myMerchPrecio.textContent = 'Unit usd $ ' + info.precio;
         // Boton 
         const myMerchBoton = document.createElement('button');
